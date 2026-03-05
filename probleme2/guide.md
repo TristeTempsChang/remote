@@ -15,6 +15,8 @@ Le dossier contient les éléments suivants :
 - Caddyfile
 - Deux fichier de conf caddy pour fail2ban
 
+> 💡 Le choix technique pour Flask vient du fait qu'il était le plus simple à mettre en place
+
 <br />
 
 ## 0) Prérequis
