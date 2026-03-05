@@ -73,8 +73,8 @@ Une fois le fichier de service créer, lancez ces commandes dans votre terminal 
 
 ```bash
 systemctl --user daemon-reload
-systemctl --user enable --now webapp
-systemctl --user status webapp --no-pager
+systemctl --user enable --now probleme2
+systemctl --user status probleme2 --no-pager
 ```
 
 ### Test pour voir si le service fonctionne
@@ -167,7 +167,7 @@ Exemple : `192.168.1.50`
 Une fois l'ip trouvé, générez des échecs de login :
 
 ```bash
-IP="192.168.1.50"  # remplacer par votre IP
+IP="192.168.1.130"  # remplacer par votre IP
 for i in $(seq 1 6); do
   curl -s -o /dev/null -w "%{http_code}\n" \
     -X POST http://$IP/login \
@@ -186,7 +186,7 @@ On doit voir l'ip dans `Banned IP list`.
 Vérifiez ensuite que le ban soit effectif
 
 ```bash
-curl -i http://$IP/login
+curl -i http://$IP/login #$IP est la variable que vous avez rentré juste avant
 ```
 
 Si vous souhaitez débannir vous pouvez taper cette commande :
